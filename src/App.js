@@ -18,7 +18,7 @@ function App() {
 
   const handleCurrent = (answerIndex) => {
     //if current question is 50 (index 49) it will no more change
-    if(current < 49) {
+    if(current < 49 && !submitted) {
       setCurrent(current + 1);
       if(answerIndex === correctAnswer) {
         setScore(score + 1);
